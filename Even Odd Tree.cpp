@@ -1,5 +1,12 @@
 class Solution {
 public:
+    bool checkFalse(bool flag, int curr, int prev)
+    {
+        if(flag == 0 && (curr % 2 == 0 || prev >= curr)) return 1;
+        if(flag == 1 && (curr % 2 != 0 || prev <= curr)) return 1;
+        return 0;
+    }
+
     bool isEvenOddTree(TreeNode* root) {
         if(root == NULL) return 1;
         queue<TreeNode*> q;
@@ -27,7 +34,7 @@ public:
             }
             else
             {
-                if((flag == 0 && (front -> val % 2 == 0 || prev >= front -> val)) || (flag == 1 && (front -> val % 2 != 0 || prev <= front -> val))) return 0;
+                if(checkFalse(flag, front -> val, prev)) return 0;
                 prev = front -> val;
                 if(front -> left) q.push(front -> left);
                 if(front -> right) q.push(front -> right);
