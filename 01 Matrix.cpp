@@ -19,6 +19,7 @@ public:
             }
         }
 
+        //BFS
         while(!q.empty()){
             int steps = q.front().first;
             int r = q.front().second.first;
