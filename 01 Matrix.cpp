@@ -30,7 +30,7 @@ public:
                 int newR = r + delR[i];
                 int newC = c + delC[i];
 
-                if(newR >= 0 && newC >= 0 && newR < n && newC < m && matrix[newR][newC] == 1 && vis[newR][newC] == -1){
+                if(newR >= 0 && newC >= 0 && newR < n && newC < m && matrix[newR][newC] && vis[newR][newC] == -1){
                     vis[newR][newC] = steps+1;
                     q.push({steps+1, {newR, newC}});
                 }
