@@ -10,6 +10,7 @@
  */
 class Solution {
 public:
+//Find middle of linked list
     ListNode* findMid(ListNode* head, int size)
     {
         int count = 0;
