@@ -18,7 +18,6 @@ public:
         }
 
         for(auto it: mpp){
-            cout<<it.second<<" ";
             ans = (ans + (it.second*1ll*(it.second-1)/2))%mod;
         }
         return ans;
