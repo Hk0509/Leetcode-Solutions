@@ -2,11 +2,6 @@ class Solution {
 public:
     bool closeStrings(string word1, string word2) {
         if(word1.size() != word2.size()) return 0;
-        sort(word1.begin(), word1.end());
-        sort(word2.begin(), word2.end());
-
-        if(word1 == word2) return 1;
-
         map<char, int> mpp1, mpp2;
         for(auto it: word1){
             mpp1[it]++;
