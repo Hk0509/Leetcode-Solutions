@@ -13,7 +13,6 @@ public:
                 j++;
             }
         }
-
         return ans;
     }
 };
