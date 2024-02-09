@@ -17,10 +17,9 @@ public:
                     break;
                 }
             }
-            if(flag) ans.push_back(0);
-            else ans.push_back(1);
+            if(flag) ans.push_back(false);
+            else ans.push_back(true);
         }
-
         return ans;
     }
 };
